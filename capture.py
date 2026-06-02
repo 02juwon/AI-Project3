@@ -692,7 +692,7 @@ class AgentRules:
             agentState.scaredTimer = 0
           else:
             score = KILL_POINTS
-            if notstate.isOnRedTeam(agentIndex):
+            if not state.isOnRedTeam(agentIndex):
               score = -score
             state.data.scoreChange += score
             otherAgentState.isPacman = False
